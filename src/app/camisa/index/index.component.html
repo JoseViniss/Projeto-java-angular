@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Angular 14 CRUD Example - ItSolutionStuff.com</h1>
+    
+    <a href="#" routerLink="/camisa/create" class="btn btn-success">Create New Post</a>
+      
+    <table class="table table-striped">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>Preço</th>
+                <th>Tamanho</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let camisa of camisas">
+                <td>{{ camisa.id }}</td>
+                <td>{{ camisa.preco_uni}}</td>
+                <td>{{ camisa.tamanho}}</td>
+                <td>
+                  <button type="button" (click)="deletePost(camisa.id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+ </div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Create New Post</h1>
+  
+    <a href="#" routerLink="/camisas/index" class="btn btn-primary">Back</a>
+        
+    <form class="needs-validation" novalidate [formGroup]="form" style="padding-top: 30px;">
+        <div class="col-md-4">
+
+          <label for="preco_uni" class="form-label">Preço</label>
+          <input
+            type="number"
+            class="form-control"
+            id="preco_uni"
+            placeholder="Preço produto"
+            formControlName="preco_uni"
+            [ngClass]="{'is-invalid':submited && hasError('preco_uni')}"
+          />
+          <label for="tamanho" class="form-label">Tamanho</label>
+          <input
+            type="tamanho"
+            class="form-control"
+            id="tamanho"
+            placeholder="Tamanho peça"
+            formControlName="tamanho"
+            [ngClass]="{'is-invalid':submited && hasError('tamanho')}"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" (click)="submit()">Salvar</button>
+            <button type="submit" class="btn btn-default "(click)="cancel()">Cancelar</button>
+</div>
